@@ -10,6 +10,7 @@
     "ajv": "6.12.6",
     "ajv-keywords": "3.5.2",
     "axios": "^1.9.0",
+    "lucide-react": "^0.510.0",
     "postcss-flexbugs-fixes": "4.2.1",
     "postcss-preset-env": "6.7.0",
     "react": "^19.1.0",
