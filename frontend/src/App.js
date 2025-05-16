@@ -9,9 +9,10 @@ import LoginPage from "./pages/LoginPage";
 import { useEffect } from "react";
 import { useAuthStore } from "./store/useAuthStore.js";
 import { Toaster } from "react-hot-toast";
+import { useThemeStore } from "./store/useThemeStore.js"
 const App = () => {
   const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
-  
+  const {theme} = useThemeStore();
   useEffect(() => {
     checkAuth();  
   }, [checkAuth]);
@@ -25,7 +26,7 @@ const App = () => {
   }
 
   return (
-    <div> 
+    <div data-theme={theme}> 
       <Navbar />
       <main className="container mx-auto p-4"> {/* Conteneur pour le contenu */}
         <Routes>
