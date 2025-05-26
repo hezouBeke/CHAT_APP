@@ -12,7 +12,7 @@ import { Toaster } from "react-hot-toast";
 import { useThemeStore } from "./store/useThemeStore.js"
 const App = () => {
   const { authUser, checkAuth, isCheckingAuth,  onlineUsers  } = useAuthStore();
-  
+
   const {theme} = useThemeStore();
 
   console.log({ onlineUsers });
@@ -30,8 +30,8 @@ const App = () => {
 
   return (
     <div data-theme={theme}> 
-      <Navbar />
-      <main className="container mx-auto p-4"> {/* Conteneur pour le contenu */}
+ 
+      <main className="container mx-auto p-4"> 
         <Routes>
           <Route path="/" element={authUser ? <HomePage /> : <Navigate to="/login"/>} />
           <Route path="/signup" element={!authUser ? <SignUpPage /> : <Navigate to="/" />} />
