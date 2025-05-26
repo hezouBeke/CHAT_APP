@@ -4,7 +4,7 @@ import { axiosInstance } from '../components/lib/axios';
 import toast from "react-hot-toast";
 import { io } from 'socket.io-client';
 
-const BASE_URL= "https://chat-back-deploy-6ai8.onrender.com"
+const BASE_URL= "http://localhost:5001"
 export const useAuthStore = create((set, get) => ({
     authUser: null,
     isSigningIn: false,
